@@ -2,7 +2,7 @@ import numpy as np
 
 class Perceptron:
     def __init__(self, eta, epochs):
-        np.random.seed(7)
+        np.random.seed(3)
         self.weights = np.random.randn(3)*1e-4
         print(f"initial weights before training : {self.weights}")
         self.eta = eta
