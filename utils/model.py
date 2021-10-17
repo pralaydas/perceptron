@@ -1,6 +1,5 @@
 import numpy as np
 import logging
-from tqdm import tqdm
 
 class Perceptron:
     def __init__(self, eta, epochs):
@@ -21,7 +20,7 @@ class Perceptron:
         X_with_bias  = np.c_[self.X , -np.ones((len(self.X),1))] #concatenation with bias
         logging.info(f"X with bias values: {X_with_bias}")
 
-        for epoch in tqdm(range(self.epochs), total  = self.epochs, desc = "training the model") :
+        for epoch in range(self.epochs) :
             logging.info("--"*10)
             logging.info(f"for epoch: {epoch+1}")
             logging.info("--"*10)
